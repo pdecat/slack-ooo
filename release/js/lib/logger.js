@@ -11,6 +11,13 @@ var logger = new winston.Logger({
             timestamp: true,
             prettyPrint: true,
             handleExceptions: true
+        }),
+        new (winston.transports.File)({
+            filename: '/var/log/slack-ooo.log',
+            timestamp: true,
+            prettyPrint: true,
+            handleExceptions: true,
+      })
         })
     ]
 });
